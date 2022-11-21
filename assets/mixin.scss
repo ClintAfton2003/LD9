@@ -1,0 +1,111 @@
+@mixin HeadingH1 {
+     font-family: 'Philosopher';
+     font-style: normal;
+     font-weight: 700;
+     font-size: 48.83px;
+     line-height: 58px;
+     color: #150C01;
+
+}
+
+@mixin HeadingH2 {
+     font-family: 'Philosopher';
+     font-style: normal;
+     font-weight: 700;
+     font-size: 31.25px;
+     line-height: 34px;
+     color: #150C01;
+}
+
+@mixin Css_P {
+     font-family: 'Roboto';
+     font-style: normal;
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 20px;
+     color: #150C01;
+     opacity: 0.7;
+}
+
+@mixin Css_span {
+     font-family: 'Roboto';
+     font-style: normal;
+     font-size: 12px;
+     line-height: 18px;
+     color: #150C01;
+     opacity: 0.7;
+}
+
+@mixin Buttun_Oder {
+     cursor: pointer;
+     padding: 16px 25px;
+     color: #fff;
+     background: #DC780B;
+     border-radius: 5px;
+     border: none;
+}
+
+@mixin Buttun_Food {
+     cursor: pointer;
+     padding: 15px 22px;
+     color: #DC780B;
+     background: #ffffff;
+     border-radius: 5px;
+     border: 1px solid #DC780B;
+}
+
+@mixin Buttun_booking {
+     cursor: pointer;
+     padding: 14px 25px;
+     color: #ffffff;
+     background: #DC775B;
+     border-radius: 5px;
+     border: none;
+
+}
+
+@mixin Hover-button {
+     background-color: #fff;
+     color: #150C01;
+     border: 1px solid black;
+}
+
+
+@mixin linkClick {
+     font-family: 'Roboto';
+     font-style: normal;
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 19px;
+     text-align: center;
+     letter-spacing: 0.2em;
+     text-transform: uppercase;
+     color: #DC780B;
+     opacity: 0.7;
+}
+
+@mixin cssp_tieude {
+
+     font-family: 'Roboto';
+     font-style: normal;
+     font-weight: 500;
+     font-size: 16px;
+     line-height: 19px;
+     /* identical to box height */
+
+
+     letter-spacing: 0.2em;
+     text-transform: uppercase;
+
+     color: #DC780B;
+
+     opacity: 0.7;
+}
+
+@mixin button_plus {
+     padding: 10px 15px;
+     background-color: #DC775B;
+     border: none;
+     cursor: pointer;
+     border-radius: 5px;
+}

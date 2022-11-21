@@ -1,0 +1,560 @@
+// GG Font
+@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,700;1,400&family=Roboto:wght@500&display=swap');
+
+// ------------
+@import'./mixin.scss';
+$Font-main: 'Philosopher',
+     sans-serif;
+$Font-mini: 'Roboto',
+     sans-serif;
+$color-main: #DC780B;
+$while-color: #fff;
+
+// ---------------------
+body {
+     background-color: $while-color ;
+}
+
+ul {
+     list-style-type: none;
+}
+
+a {
+     text-decoration: none;
+}
+
+img {
+     max-width: 100%;
+     height: auto;
+}
+
+// css classes------------
+.section {
+     padding: 2rem 0 4rem;
+}
+
+.pageFood {
+     height: 5000px;
+     width: 95%;
+     margin: 0 auto;
+     background-color: $while-color;
+}
+
+.pageFood_header {
+     position: relative;
+     height: 50px;
+     width: 100%;
+     display: flex;
+}
+
+.pageFood_header-logo {
+     width: 100px;
+}
+
+.pageFood_header-menu {
+
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     gap: 30px;
+
+
+
+     a {
+          font-family: $Font-mini;
+          color: black;
+
+
+     }
+
+     a:hover {
+          color: $color-main;
+     }
+}
+
+.pageFood_header-button {
+     position: absolute;
+     right: 10px;
+
+     button {
+          @include Buttun_booking();
+
+
+     }
+}
+
+.pageFood_header-button:hover button {
+     @include Hover-button();
+}
+
+.pageFood_Home {
+     display: flex;
+     margin-top: 20px;
+     height: 500px;
+     width: 100%;
+     // background-color: aqua;
+     margin-bottom: 150px;
+
+}
+
+.home_left {
+     top: 20%;
+     padding-left: 50px;
+     padding-top: 50px;
+     left: 10%;
+     height: 60%;
+     width: 45%;
+     // background-color: #DC780B;
+
+     h1 {
+          @include HeadingH1();
+     }
+
+     p {
+          @include Css_P();
+     }
+
+     #Oder {
+          @include Buttun_Oder();
+     }
+
+     #Food {
+          @include Buttun_Food();
+     }
+}
+
+.home_right {
+
+     width: 50%;
+     height: 100%;
+}
+
+.pageFood_features {
+     width: 1080px;
+     height: 400px;
+
+     margin: auto;
+     text-align: center;
+
+     p {
+          @include cssp_tieude();
+     }
+
+     h2 {
+          @include HeadingH2();
+     }
+
+     .Box_features {
+          width: 100%;
+          height: 300px;
+          // background-color: aqua;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+     }
+}
+
+.Box_list {
+
+     height: 100%;
+     width: 26%;
+     background-color: rgb(255, 255, 255);
+     margin: 20px;
+
+     .list_icon {
+          height: 90px;
+          width: 90px;
+          border-radius: 50%;
+          background-color: #f4b9ff;
+          margin: 0 auto;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #c4c7ba;
+
+     }
+
+     h2 {
+          @include HeadingH2();
+     }
+
+     p {
+          @include Css_P();
+          font-size: 11px;
+     }
+}
+
+.pageFood_Aboutus {
+     height: 450px;
+     width: 90%;
+     margin: 0 auto;
+     margin-top: 100px;
+     display: flex;
+}
+
+.about_left {
+     height: 100%;
+     margin-right: 60px;
+
+     img {
+          border-radius: 30px;
+          width: 90%;
+     }
+}
+
+.about_right {
+     width: 40%;
+     height: 50%;
+     margin-top: 50px;
+
+     p {
+          @include cssp_tieude();
+     }
+
+     h1 {
+          @include HeadingH2();
+     }
+
+     span {
+          @include Css_P();
+          font-weight: normal;
+     }
+
+     button {
+          @include Buttun_booking();
+          margin-top: 30px;
+     }
+}
+
+.pageFood_Menu {
+     height: 1200px;
+     width: 90%;
+     margin: 0 auto;
+     background-color: #eae1eb;
+     margin-top: 100px;
+}
+
+.menu_Top {
+     height: 150px;
+     width: 70%;
+     // background-color: rgb(82, 210, 95);
+     text-align: center;
+     margin: 0 auto;
+
+     p {
+          @include cssp_tieude();
+     }
+
+     h2 {
+          @include HeadingH2();
+          line-height: 10px;
+     }
+
+     span {
+          @include Css_span();
+     }
+}
+
+.menu_center {
+     margin-top: 30px;
+     height: 400px;
+     width: 100%;
+     background-color: aqua;
+     display: flex;
+
+
+     .list_food {
+          margin-left: 35px;
+          height: 400px;
+          width: 29%;
+          background-color: #f5f5f5;
+          position: relative;
+          border-radius: 20px 10px 10px 10px;
+          border: 1px solid black;
+
+          &-img {
+               height: 250px;
+               width: 100%;
+               // background-color: #928f8d;
+
+               img {
+                    border-radius: 70px 10px 70px 10px;
+               }
+          }
+
+          #Monney {
+               display: flex;
+
+               h2 {
+                    margin: 20px 10px;
+               }
+          }
+
+          h2 {
+               @include HeadingH2();
+               line-height: 10px;
+
+          }
+
+
+
+          p {
+               @include Css_P();
+               margin: 0px 10px;
+               line-height: 20px;
+               font-size: 15px;
+
+          }
+
+          button {
+
+               @include button_plus();
+               margin-left: 20px;
+
+               i {
+
+                    color: #fff;
+               }
+
+
+          }
+
+
+     }
+
+     #clude {
+          color: #c4c7ba;
+     }
+}
+
+.best {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+
+     .checked {
+          color: orange;
+     }
+
+     .group {
+          margin-right: 20px;
+     }
+
+}
+
+body {
+     scroll-behavior: smooth;
+}
+
+.pageFood_take {
+     height: 450px;
+     width: 100%;
+     background: #FBF1E7;
+     position: relative;
+     margin-top: 100px;
+     border-radius: 10px;
+
+}
+
+.Take-content {
+     position: absolute;
+     width: 40%;
+     height: 300px;
+     // background-color: #DC780B;
+     top: 70px;
+     left: 100px;
+
+     b p {
+          @include cssp_tieude();
+     }
+
+     h2 {
+          @include HeadingH2();
+     }
+
+     span {
+          @include Css_span();
+     }
+
+     .App_take {
+          display: flex;
+
+     }
+
+     button {
+          margin-top: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: 20px;
+          border: none;
+     }
+}
+
+
+#appple {
+     background-color: black;
+     color: #fff;
+     padding: 10px 20px;
+     border-radius: 5px;
+
+     img {
+          margin-right: 10px;
+     }
+}
+
+#play {
+     background-color: rgb(255, 255, 255);
+     color: rgb(0, 0, 0);
+     padding: 10px 20px;
+     border-radius: 5px;
+
+     img {
+          margin-right: 10px;
+     }
+}
+
+.Take-image {
+     position: absolute;
+     right: 100px;
+     bottom: -50px;
+
+     img {
+          width: 85%;
+     }
+}
+
+img {
+     #bobo {
+          width: 50%;
+     }
+
+}
+
+.Testimonial {
+     margin-top: 100px;
+     text-align: center;
+
+     p {
+          @include cssp_tieude();
+          letter-spacing: 0.1em;
+     }
+
+     h2 {
+          @include HeadingH2();
+     }
+
+     span {
+          @include Css_span();
+     }
+}
+
+.pageFood_slider {
+     height: 400px;
+     width: 80%;
+     margin: 0 auto;
+     background-color: #DC780B;
+}
+
+.pageFood_Contact {
+     width: 100%;
+     text-align: center;
+     background-color: #FBF1E7;
+     height: 400px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-top: 50px;
+
+     p {
+
+          @include cssp_tieude();
+     }
+
+     h2 {
+
+          @include HeadingH2();
+     }
+
+     #ipnutTut {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          position: relative;
+          // background-color: #000000;
+          width: 100%;
+     }
+
+     input {
+          width: 90%;
+          padding: 20px 20px;
+          border: none;
+          border-radius: 5px;
+          outline: none
+     }
+
+     button {
+          position: absolute;
+          right: 0px;
+          @include Buttun_Oder();
+          padding: 20px 30px;
+     }
+}
+
+.pageFood_footer {
+     height: 400px;
+     width: 100%;
+     background-color: black;
+     display: flex;
+
+     .list_link {
+          margin-left: 70px;
+          padding-top: 60px;
+          height: 68%;
+          width: 20%;
+
+
+     }
+
+     img {
+          margin-top: 50px;
+          width: 80px;
+     }
+
+     p {
+          @include Css_P();
+          color: wheat;
+     }
+
+     h2 {
+          cursor: pointer;
+          @include HeadingH2();
+          margin-left: 30px;
+          color: #eae1eb;
+     }
+
+     ul li {
+          cursor: pointer;
+          color: #c4c7ba;
+          line-height: 40px;
+     }
+
+     #icon {
+
+          display: flex;
+          gap: 5px;
+          width: 60%;
+
+          img {
+               width: 50%;
+          }
+     }
+
+}
+
+@media screen and (max-width:414px) {
+     .pageFood_header-menu {
+          display: none;
+     }
+}

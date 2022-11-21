@@ -1,0 +1,28 @@
+<div class="list_food">
+                         <div class="list_food-img">
+                              <img src="/assets/img/ga.png" alt="">
+                              <div id="Monney">
+                                   <h2>Vegie Muffen </h2>
+                                   <h2> 16$</h2>
+                              </div>
+
+                              <p>There are many things are needed to start the Fast Food Business.</p>
+                              <br>
+                              <div class="best">
+                                   <button id="Btn-plus">
+                                        <i class="fa-solid fa-plus"></i>
+                                   </button>
+                                   <div class="group">
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                        <span class="fa fa-star"></span>
+                                   </div>
+
+                              </div>
+
+
+
+                         </div>
+                    </div>
