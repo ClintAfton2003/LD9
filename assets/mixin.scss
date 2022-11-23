@@ -1,40 +1,39 @@
 @mixin HeadingH1 {
-     font-family: 'Philosopher';
+     font-family: "Philosopher";
      font-style: normal;
      font-weight: 700;
      font-size: 48.83px;
      line-height: 58px;
-     color: #150C01;
-
+     color: #150c01;
 }
 
 @mixin HeadingH2 {
-     font-family: 'Philosopher';
+     font-family: "Philosopher";
      font-style: normal;
      font-weight: 700;
      font-size: 31.25px;
      line-height: 34px;
-     color: #150C01;
+     color: #150c01;
 }
 
 @mixin Css_P {
-     font-family: 'Roboto';
+     font-family: "Roboto";
      font-style: normal;
      font-weight: 500;
      font-size: 16px;
-     line-height: 20px;
-     margin-top: 42px;
-     color: #150C01;
+     line-height: 24px;
+     margin-top: 15px;
+     color: #150c01;
      opacity: 0.7;
 }
 
 @mixin Css_span {
-     font-family: 'Roboto';
+     font-family: "Roboto";
      font-style: normal;
      font-size: 16px;
-     line-height: 18px;
+     line-height: 24px;
      font-weight: 400;
-     color: #150C01;
+     color: #150c01;
      opacity: 0.7;
 }
 
@@ -43,21 +42,11 @@
      padding: 20px 40px;
      font-size: 16px;
      color: #fff;
-     background: #DC780B;
+     background: #dc780b;
      border-radius: 5px;
-     border: none;
+     border: 1.5px solid #dc780b;
      font-weight: 500;
-}
-
-@mixin Buttun_Food {
-     cursor: pointer;
-     padding: 20px 40px;
-     color: #DC780B;
-     background: #ffffff;
-     border-radius: 5px;
-     border: 1px solid #DC780B;
-     margin-left: 30px;
-     font-weight: 500;
+     margin-right: 30px;
 }
 
 @mixin Buttun_booking {
@@ -65,19 +54,19 @@
      padding: 12px 34px;
      font-size: 16px;
      color: #ffffff;
-     background: #DC780B;
+     background: #dc780b;
      border-radius: 5px;
-     border: none;
+     border: 1.5px solid #dc780b;
 }
 
 @mixin Hover-button {
      background-color: #fff;
-     color: #150C01;
-     border: 1px solid black;
+     color: #dc780b;
+     border: 1.5px solid rgb(220, 120, 11, 0.1);
 }
 
 @mixin linkClick {
-     font-family: 'Roboto';
+     font-family: "Roboto";
      font-style: normal;
      font-weight: 500;
      font-size: 16px;
@@ -85,13 +74,12 @@
      text-align: center;
      letter-spacing: 0.2em;
      text-transform: uppercase;
-     color: #DC780B;
+     color: #dc780b;
      opacity: 0.7;
 }
 
 @mixin cssp_tieude {
-
-     font-family: 'Roboto';
+     font-family: "Roboto";
      font-style: normal;
      font-weight: 500;
      font-size: 16px;
@@ -99,19 +87,31 @@
      margin-top: 10px;
      /* identical to box height */
 
-
      letter-spacing: 0.2em;
      text-transform: uppercase;
 
-     color: #DC780B;
+     color: #dc780b;
 
      opacity: 0.7;
 }
 
 @mixin button_plus {
      padding: 10px 15px;
-     background-color: #DC775B;
+     background-color: #dc780b;
      border: none;
      cursor: pointer;
      border-radius: 5px;
+}
+
+@mixin menu_btn {
+     padding: 11px 30px;
+     background-color: #dc780b;
+     border-radius: 5px;
+     border: 1.5px solid #dc780b;
+     color: #ffffff;
+     font-size: 16px;
+     font-weight: 500;
+     line-height: 18px;
+     margin-top: 40px;
+     cursor: pointer;
 }

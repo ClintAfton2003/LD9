@@ -1,13 +1,11 @@
 // GG Font
-@import url('https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,700;1,400&family=Roboto:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,700;1,400&family=Roboto:wght@500&display=swap");
 
 // ------------
-@import'./mixin.scss';
-$Font-main: 'Philosopher',
-     sans-serif;
-$Font-mini: 'Roboto',
-     sans-serif;
-$color-main: #DC780B;
+@import "./mixin.scss";
+$Font-main: "Philosopher", sans-serif;
+$Font-mini: "Roboto", sans-serif;
+$color-main: #dc780b;
 $while-color: #fff;
 
 // ---------------------
@@ -19,8 +17,8 @@ $while-color: #fff;
 }
 
 body {
-     background-color: $while-color;
-     max-width: 95%;
+     background-color: cyan;
+     max-width: 1440px;
      margin: 0 auto;
 }
 
@@ -38,22 +36,18 @@ img {
 }
 
 // css classes------------
-.section {
-     padding: 0 150px;
-     margin-top: 115px;
-}
-
 .pageFood {
      background-color: $while-color;
+     padding: 0 150px;
 }
 
 .pageFood_header {
-     width: 1140px;
-     height: 45px;
-     margin: 0 auto;
-     margin-top: 30px;
+     width: 100%;
+     padding: 30px 0;
      display: flex;
      justify-content: space-between;
+     position: relative;
+     z-index: 999999999;
 
      &-left {
           display: flex;
@@ -64,12 +58,11 @@ img {
      }
 }
 
-
 .pageFood_header-menu {
      display: flex;
      justify-content: space-between;
      align-items: center;
-     gap: 30px;
+     gap: 40px;
 
      a {
           font-family: $Font-mini;
@@ -90,14 +83,11 @@ img {
      @include Hover-button();
 }
 
-
-
 .pageFood_Home {
      display: flex;
      align-items: center;
      position: relative;
      height: 670px;
-     margin-left: 150px;
 }
 
 .home_left {
@@ -116,8 +106,16 @@ img {
           @include Buttun_Oder();
      }
 
+     #Oder:hover {
+          @include Hover-button();
+     }
+
      #Food {
-          @include Buttun_Food();
+          @include Buttun_Oder();
+     }
+
+     #Food:hover {
+          @include Hover-button();
      }
 }
 
@@ -125,12 +123,13 @@ img {
      width: 801px;
      height: 670px;
      position: absolute;
-     right: 0;
-     bottom: 0;
+     right: -140px;
+     bottom: 70px;
 
      img {
           width: 100%;
           height: 100%;
+          z-index: -1;
      }
 }
 
@@ -142,6 +141,7 @@ img {
      }
 
      h2 {
+          margin-top: 7px;
           @include HeadingH2();
      }
 
@@ -166,16 +166,15 @@ img {
           height: 90px;
           width: 90px;
           border-radius: 50%;
-          background-color: #f4b9ff;
           margin: 0 auto;
           display: flex;
           justify-content: center;
           align-items: center;
-          background: #c4c7ba;
-
+          background-color: #c4c4c42d;
      }
 
      h2 {
+          margin-top: 33px;
           @include HeadingH2();
      }
 
@@ -188,7 +187,7 @@ img {
 .pageFood_Aboutus {
      margin-top: 100px;
      display: flex;
-     gap: 98px
+     gap: 98px;
 }
 
 .about_left {
@@ -205,7 +204,7 @@ img {
 .about_right {
      width: 40%;
      height: 50%;
-     margin-top: 50px;
+     margin: auto;
 
      p {
           @include cssp_tieude();
@@ -221,14 +220,17 @@ img {
           font-weight: normal;
      }
 
-     button {
+     .btn_aboutUs {
           @include Buttun_booking();
           margin-top: 30px;
+     }
+
+     .btn_aboutUs:hover {
+          @include Hover-button();
      }
 }
 
 .pageFood_Menu {
-     // background-color: #eae1eb;
      margin-top: 100px;
      display: flex;
      flex-direction: column;
@@ -264,7 +266,6 @@ img {
      display: grid;
      grid-template-columns: 1fr 1fr 1fr;
      gap: 30px;
-
 
      .list_food {
           max-width: 360px;
@@ -324,25 +325,20 @@ img {
                          color: #fff;
                     }
                }
-          }
-     }
 
-     #clude {
-          color: #c4c7ba;
+               .fa-star {
+                    color: rgb(196, 196, 196, 0.3);
+               }
+          }
      }
 }
 
 .menu_bottom-btn {
-     padding: 11px 30px;
-     background-color: transparent;
-     border-radius: 5px;
-     border: 1px solid #DC780B;
-     color: #DC780B;
-     font-size: 16px;
-     font-weight: 500;
-     line-height: 18px;
-     margin-top: 40px;
-     cursor: pointer;
+     @include menu_btn();
+}
+
+.menu_bottom-btn:hover {
+     @include Hover-button();
 }
 
 .best {
@@ -353,7 +349,6 @@ img {
      .checked {
           color: orange;
      }
-
 }
 
 body {
@@ -361,15 +356,11 @@ body {
 }
 
 .pageFood_take {
-     margin-bottom: 100rem;
      height: 450px;
-     width: 100%;
-     background: #FBF1E7;
+     background: rgb(251, 241, 231, 0.4);
      position: relative;
-     margin-top: 100px;
+     margin: 100px -150px 100rem -150px;
      border-radius: 10px;
-     padding: 0 244px;
-
 }
 
 .Take-content {
@@ -379,6 +370,7 @@ body {
      // background-color: #DC780B;
      top: 70px;
      left: 100px;
+     margin-left: 97px;
 
      p {
           @include cssp_tieude();
@@ -417,25 +409,24 @@ body {
      }
 }
 
-
 #appple {
      background-color: black;
      color: #fff;
      border-radius: 5px;
-
-
 }
 
 #play {
-     background-color: rgb(255, 255, 255);
+     background-color: transparent;
      color: rgb(0, 0, 0);
      border-radius: 5px;
+     border: 1.5px solid rgb(21, 12, 1, 0.1);
 }
 
 .Take-image {
      position: absolute;
      right: 100px;
      bottom: -50px;
+     margin-right: 97px;
 
      img {
           width: 85%;
@@ -446,7 +437,6 @@ img {
      #bobo {
           width: 50%;
      }
-
 }
 
 .Testimonial {
@@ -471,13 +461,13 @@ img {
      height: 400px;
      width: 80%;
      margin: 0 auto;
-     background-color: #DC780B;
+     background-color: #dc780b;
 }
 
 .pageFood_Contact {
      width: 100%;
      text-align: center;
-     background-color: #FBF1E7;
+     background-color: #fbf1e7;
      height: 400px;
      display: flex;
      align-items: center;
@@ -485,12 +475,10 @@ img {
      margin-top: 50px;
 
      p {
-
           @include cssp_tieude();
      }
 
      h2 {
-
           @include HeadingH2();
      }
 
@@ -509,7 +497,7 @@ img {
           padding: 20px 20px;
           border: none;
           border-radius: 5px;
-          outline: none
+          outline: none;
      }
 
      button {
@@ -531,8 +519,6 @@ img {
           padding-top: 60px;
           height: 68%;
           width: 20%;
-
-
      }
 
      img {
@@ -559,7 +545,6 @@ img {
      }
 
      #icon {
-
           display: flex;
           gap: 5px;
           width: 60%;
@@ -568,10 +553,9 @@ img {
                width: 50%;
           }
      }
-
 }
 
-@media screen and (max-width:414px) {
+@media screen and (max-width: 414px) {
      .pageFood_header-menu {
           display: none;
      }

@@ -6,8 +6,8 @@
 }
 
 body {
-  background-color: #fff;
-  max-width: 95%;
+  background-color: cyan;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -24,22 +24,18 @@ img {
   height: auto;
 }
 
-.section {
-  padding: 0 150px;
-  margin-top: 115px;
-}
-
 .pageFood {
   background-color: #fff;
+  padding: 0 150px;
 }
 
 .pageFood_header {
-  width: 1140px;
-  height: 45px;
-  margin: 0 auto;
-  margin-top: 30px;
+  width: 100%;
+  padding: 30px 0;
   display: flex;
   justify-content: space-between;
+  position: relative;
+  z-index: 999999999;
 }
 .pageFood_header-left {
   display: flex;
@@ -52,14 +48,14 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 30px;
+  gap: 40px;
 }
 .pageFood_header-menu a {
   font-family: "Roboto", sans-serif;
   color: black;
 }
 .pageFood_header-menu a:hover {
-  color: #DC780B;
+  color: #dc780b;
 }
 
 .pageFood_header-button {
@@ -67,16 +63,16 @@ img {
   padding: 12px 34px;
   font-size: 16px;
   color: #ffffff;
-  background: #DC780B;
+  background: #dc780b;
   border-radius: 5px;
-  border: none;
+  border: 1.5px solid #dc780b;
   font-weight: 400;
 }
 
 .pageFood_header-button:hover {
   background-color: #fff;
-  color: #150C01;
-  border: 1px solid black;
+  color: #dc780b;
+  border: 1.5px solid rgba(220, 120, 11, 0.1);
 }
 
 .pageFood_Home {
@@ -84,7 +80,6 @@ img {
   align-items: center;
   position: relative;
   height: 670px;
-  margin-left: 150px;
 }
 
 .home_left {
@@ -97,16 +92,16 @@ img {
   font-weight: 700;
   font-size: 48.83px;
   line-height: 58px;
-  color: #150C01;
+  color: #150c01;
 }
 .home_left p {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 20px;
-  margin-top: 42px;
-  color: #150C01;
+  line-height: 24px;
+  margin-top: 15px;
+  color: #150c01;
   opacity: 0.7;
 }
 .home_left #Oder {
@@ -114,32 +109,45 @@ img {
   padding: 20px 40px;
   font-size: 16px;
   color: #fff;
-  background: #DC780B;
+  background: #dc780b;
   border-radius: 5px;
-  border: none;
+  border: 1.5px solid #dc780b;
   font-weight: 500;
+  margin-right: 30px;
+}
+.home_left #Oder:hover {
+  background-color: #fff;
+  color: #dc780b;
+  border: 1.5px solid rgba(220, 120, 11, 0.1);
 }
 .home_left #Food {
   cursor: pointer;
   padding: 20px 40px;
-  color: #DC780B;
-  background: #ffffff;
+  font-size: 16px;
+  color: #fff;
+  background: #dc780b;
   border-radius: 5px;
-  border: 1px solid #DC780B;
-  margin-left: 30px;
+  border: 1.5px solid #dc780b;
   font-weight: 500;
+  margin-right: 30px;
+}
+.home_left #Food:hover {
+  background-color: #fff;
+  color: #dc780b;
+  border: 1.5px solid rgba(220, 120, 11, 0.1);
 }
 
 .home_right {
   width: 801px;
   height: 670px;
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: -140px;
+  bottom: 70px;
 }
 .home_right img {
   width: 100%;
   height: 100%;
+  z-index: -1;
 }
 
 .pageFood_features {
@@ -155,16 +163,17 @@ img {
   /* identical to box height */
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #DC780B;
+  color: #dc780b;
   opacity: 0.7;
 }
 .pageFood_features h2 {
+  margin-top: 7px;
   font-family: "Philosopher";
   font-style: normal;
   font-weight: 700;
   font-size: 31.25px;
   line-height: 34px;
-  color: #150C01;
+  color: #150c01;
 }
 .pageFood_features .Box_features {
   width: 100%;
@@ -185,29 +194,29 @@ img {
   height: 90px;
   width: 90px;
   border-radius: 50%;
-  background-color: #f4b9ff;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #c4c7ba;
+  background-color: rgba(196, 196, 196, 0.1764705882);
 }
 .Box_list h2 {
+  margin-top: 33px;
   font-family: "Philosopher";
   font-style: normal;
   font-weight: 700;
   font-size: 31.25px;
   line-height: 34px;
-  color: #150C01;
+  color: #150c01;
 }
 .Box_list p {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 20px;
-  margin-top: 42px;
-  color: #150C01;
+  line-height: 24px;
+  margin-top: 15px;
+  color: #150c01;
   opacity: 0.7;
   font-size: 11px;
 }
@@ -231,7 +240,7 @@ img {
 .about_right {
   width: 40%;
   height: 50%;
-  margin-top: 50px;
+  margin: auto;
 }
 .about_right p {
   font-family: "Roboto";
@@ -243,7 +252,7 @@ img {
   /* identical to box height */
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #DC780B;
+  color: #dc780b;
   opacity: 0.7;
 }
 .about_right h1 {
@@ -252,7 +261,7 @@ img {
   font-weight: 700;
   font-size: 31.25px;
   line-height: 34px;
-  color: #150C01;
+  color: #150c01;
   margin: 10px 0 30px 0;
 }
 .about_right span {
@@ -260,21 +269,26 @@ img {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 20px;
-  margin-top: 42px;
-  color: #150C01;
+  line-height: 24px;
+  margin-top: 15px;
+  color: #150c01;
   opacity: 0.7;
   font-weight: normal;
 }
-.about_right button {
+.about_right .btn_aboutUs {
   cursor: pointer;
   padding: 12px 34px;
   font-size: 16px;
   color: #ffffff;
-  background: #DC780B;
+  background: #dc780b;
   border-radius: 5px;
-  border: none;
+  border: 1.5px solid #dc780b;
   margin-top: 30px;
+}
+.about_right .btn_aboutUs:hover {
+  background-color: #fff;
+  color: #dc780b;
+  border: 1.5px solid rgba(220, 120, 11, 0.1);
 }
 
 .pageFood_Menu {
@@ -297,7 +311,7 @@ img {
   /* identical to box height */
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #DC780B;
+  color: #dc780b;
   opacity: 0.7;
 }
 .menu_Top h2 {
@@ -306,15 +320,15 @@ img {
   font-weight: 700;
   font-size: 31.25px;
   line-height: 34px;
-  color: #150C01;
+  color: #150c01;
 }
 .menu_Top span {
   font-family: "Roboto";
   font-style: normal;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 24px;
   font-weight: 400;
-  color: #150C01;
+  color: #150c01;
   opacity: 0.7;
   max-width: 748px;
   display: block;
@@ -357,7 +371,7 @@ img {
   font-weight: 700;
   font-size: 31.25px;
   line-height: 34px;
-  color: #150C01;
+  color: #150c01;
   line-height: 24px;
 }
 .menu_center .list_food .food-desc #Monney {
@@ -373,9 +387,9 @@ img {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 20px;
-  margin-top: 42px;
-  color: #150C01;
+  line-height: 24px;
+  margin-top: 15px;
+  color: #150c01;
   opacity: 0.7;
   line-height: 20px;
   font-weight: 400;
@@ -383,7 +397,7 @@ img {
 }
 .menu_center .list_food .food-desc button {
   padding: 10px 15px;
-  background-color: #DC775B;
+  background-color: #dc780b;
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -396,21 +410,27 @@ img {
 .menu_center .list_food .food-desc button i {
   color: #fff;
 }
-.menu_center #clude {
-  color: #c4c7ba;
+.menu_center .list_food .food-desc .fa-star {
+  color: rgba(196, 196, 196, 0.3);
 }
 
 .menu_bottom-btn {
   padding: 11px 30px;
-  background-color: transparent;
+  background-color: #dc780b;
   border-radius: 5px;
-  border: 1px solid #DC780B;
-  color: #DC780B;
+  border: 1.5px solid #dc780b;
+  color: #ffffff;
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
   margin-top: 40px;
   cursor: pointer;
+}
+
+.menu_bottom-btn:hover {
+  background-color: #fff;
+  color: #dc780b;
+  border: 1.5px solid rgba(220, 120, 11, 0.1);
 }
 
 .best {
@@ -427,14 +447,11 @@ body {
 }
 
 .pageFood_take {
-  margin-bottom: 100rem;
   height: 450px;
-  width: 100%;
-  background: #FBF1E7;
+  background: rgba(251, 241, 231, 0.4);
   position: relative;
-  margin-top: 100px;
+  margin: 100px -150px 100rem -150px;
   border-radius: 10px;
-  padding: 0 244px;
 }
 
 .Take-content {
@@ -443,6 +460,7 @@ body {
   height: 300px;
   top: 70px;
   left: 100px;
+  margin-left: 97px;
 }
 .Take-content p {
   font-family: "Roboto";
@@ -454,7 +472,7 @@ body {
   /* identical to box height */
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #DC780B;
+  color: #dc780b;
   opacity: 0.7;
 }
 .Take-content h2 {
@@ -463,16 +481,16 @@ body {
   font-weight: 700;
   font-size: 31.25px;
   line-height: 34px;
-  color: #150C01;
+  color: #150c01;
   line-height: 40px;
 }
 .Take-content span {
   font-family: "Roboto";
   font-style: normal;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 24px;
   font-weight: 400;
-  color: #150C01;
+  color: #150c01;
   opacity: 0.7;
   margin: 29px 0 39px 0;
   display: inline-block;
@@ -503,15 +521,17 @@ body {
 }
 
 #play {
-  background-color: rgb(255, 255, 255);
+  background-color: transparent;
   color: rgb(0, 0, 0);
   border-radius: 5px;
+  border: 1.5px solid rgba(21, 12, 1, 0.1);
 }
 
 .Take-image {
   position: absolute;
   right: 100px;
   bottom: -50px;
+  margin-right: 97px;
 }
 .Take-image img {
   width: 85%;
@@ -535,7 +555,7 @@ img #bobo {
   /* identical to box height */
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #DC780B;
+  color: #dc780b;
   opacity: 0.7;
   letter-spacing: 0.1em;
 }
@@ -545,15 +565,15 @@ img #bobo {
   font-weight: 700;
   font-size: 31.25px;
   line-height: 34px;
-  color: #150C01;
+  color: #150c01;
 }
 .Testimonial span {
   font-family: "Roboto";
   font-style: normal;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 24px;
   font-weight: 400;
-  color: #150C01;
+  color: #150c01;
   opacity: 0.7;
 }
 
@@ -561,13 +581,13 @@ img #bobo {
   height: 400px;
   width: 80%;
   margin: 0 auto;
-  background-color: #DC780B;
+  background-color: #dc780b;
 }
 
 .pageFood_Contact {
   width: 100%;
   text-align: center;
-  background-color: #FBF1E7;
+  background-color: #fbf1e7;
   height: 400px;
   display: flex;
   align-items: center;
@@ -584,7 +604,7 @@ img #bobo {
   /* identical to box height */
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #DC780B;
+  color: #dc780b;
   opacity: 0.7;
 }
 .pageFood_Contact h2 {
@@ -593,7 +613,7 @@ img #bobo {
   font-weight: 700;
   font-size: 31.25px;
   line-height: 34px;
-  color: #150C01;
+  color: #150c01;
 }
 .pageFood_Contact #ipnutTut {
   display: flex;
@@ -616,10 +636,11 @@ img #bobo {
   padding: 20px 40px;
   font-size: 16px;
   color: #fff;
-  background: #DC780B;
+  background: #dc780b;
   border-radius: 5px;
-  border: none;
+  border: 1.5px solid #dc780b;
   font-weight: 500;
+  margin-right: 30px;
   padding: 20px 30px;
 }
 
@@ -644,9 +665,9 @@ img #bobo {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 20px;
-  margin-top: 42px;
-  color: #150C01;
+  line-height: 24px;
+  margin-top: 15px;
+  color: #150c01;
   opacity: 0.7;
   color: wheat;
 }
@@ -657,7 +678,7 @@ img #bobo {
   font-weight: 700;
   font-size: 31.25px;
   line-height: 34px;
-  color: #150C01;
+  color: #150c01;
   margin-left: 30px;
   color: #eae1eb;
 }
