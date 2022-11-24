@@ -29,5 +29,5 @@ fetch('https://63762ab47e93bcb006c4d190.mockapi.io/FoodList')
                console.log(stars);
           }
      })
-     .catch((err) => console.log(err));
-
+     .catch((err) => console.log(err));'
+// Helloo
