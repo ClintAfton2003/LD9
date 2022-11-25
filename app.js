@@ -48,10 +48,10 @@ const renderStars = (number) => {
 
 const hanldeMoveSlide = (val) => {
      currentScollPosition += (val * scrollAmount)
-     if(currentScollPosition > 0) {
+     if (currentScollPosition > 0) {
           currentScollPosition = maxScroll
      }
-     if(currentScollPosition < maxScroll) {
+     if (currentScollPosition < maxScroll) {
           currentScollPosition = 0
      }
      slides.style.left = currentScollPosition + 'px'
