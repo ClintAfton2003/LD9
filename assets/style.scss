@@ -18,10 +18,15 @@ $while-color: #fff;
      box-sizing: border-box;
 }
 
+html {
+     scroll-padding-top: 70px;
+     scroll-behavior: smooth;
+     overflow-x: hidden;
+}
+
 body {
      max-width: 1440px;
      margin: 0 auto;
-     overflow-x: hidden;
 }
 
 ul {
@@ -49,6 +54,7 @@ a {
      justify-content: space-between;
      position: relative;
      margin-top: 30px;
+     z-index: 9999;
 
      &-left {
           display: flex;
@@ -263,19 +269,28 @@ a {
 .menu_center {
      margin-top: 60px;
      max-height: 940px;
+     width: 100%;
      // background-color: aqua;
      overflow: hidden;
      display: grid;
-     grid-template-columns: 1fr 1fr 1fr;
+     grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
      gap: 30px;
+     transition: max-height .5s ease-in-out;
+
+     &.active {
+          max-height: 1880px;
+     }
 
      .list_food {
           max-width: 360px;
+          max-height: 446px;
+          overflow: hidden;
           background-color: #fff;
           position: relative;
           border-radius: 76px 10px 10px 10px;
           border: 1px solid rgba(0, 0, 0, 0.1);
           border-top: 0;
+          justify-self: center;
 
           &-img {
                width: 360px;
@@ -296,6 +311,12 @@ a {
                h2 {
                     @include HeadingH2();
                     line-height: 24px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    line-clamp: 1;
+                    -webkit-box-orient: vertical;
                }
 
                #Monney {
@@ -313,6 +334,12 @@ a {
                     line-height: 20px;
                     font-weight: 400;
                     margin-top: 0;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    line-clamp: 2;
+                    -webkit-box-orient: vertical;
                }
 
                button {
@@ -330,13 +357,23 @@ a {
 
                .fa-star {
                     color: rgb(196, 196, 196, 0.3);
+
+                    &.active {
+                         color: #DC780B;
+                    }
                }
           }
      }
 }
 
+
 .menu_bottom-btn {
      @include menu_btn();
+     display: none;
+
+     &.active {
+          display: block;
+     }
 }
 
 .menu_bottom-btn:hover {
@@ -470,60 +507,90 @@ img {
 
 .pageFood_slider {
      margin: 0 auto;
-     // background-color: #dc780b;
      margin-top: 73px;
 
      .slider-container {
-          padding: 0 172px;
+          margin: 0 172px;
           display: flex;
+          height: 276px;
+          justify-content: center;
           align-items: center;
+          position: relative;
+          overflow: hidden;
 
-          .slide-btn{
-               padding: 0 10px;
+          .slide-btn {
+               position: absolute;
+               cursor: pointer;
+               z-index: 9999;
+               padding: 0 5px;
+
+               &.prev {
+                    left: 0%;
+               }
+
+               &.next {
+                    right: 0%;
+               }
           }
 
           .slides {
                text-align: center;
-               flex: 1;
-               overflow: hidden;
-               
-               .slide-wrapper {
-                    position: relative;
+               display: flex;
+               z-index: 999;
+               position: absolute;
+               left: 0;
+               transition: left .5s ease-in-out;
 
-                    .slide-item {
-                         display: flex;
-                         flex-direction: column;
-                         gap: 32px;
+               .slide-item {
+                    flex-shrink: 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 32px;
+                    width: 776px;
+                    margin-left: 10px;
 
-                         .feedback-content {
-                              .user-avt {
-                                   border-radius: 50%;
-                                   margin-bottom: 41px;
-                              }
 
-                              .user-feedback {
-                                   @include Css_span();
-                                   max-width: 506px;
-                                   margin: 0 auto;
-                                   margin-bottom: 20px;
-                              }
+
+                    .feedback-content {
+                         .user-avt {
+                              width: 50px;
+                              height: 50px;
+                              border-radius: 50%;
+                              margin-bottom: 41px;
                          }
 
-                         .user-info {
-                              font-family: "Roboto";
+                         .user-feedback {
+                              @include Css_span();
+                              max-width: 506px;
+                              margin: 0 auto;
+                              margin-bottom: 20px;
+                              overflow: hidden;
+                              text-overflow: ellipsis;
+                              display: -webkit-box;
+                              -webkit-line-clamp: 3;
+                              line-clamp: 3;
+                              -webkit-box-orient: vertical;
+                         }
 
-                              .user-name {
-                                   font-size: 16px;
-                                   font-weight: 400;
-                                   line-height: 18.75px;
-                                   margin-bottom: 6px;
-                              }
+                         .user-rate span.active{
+                              color: #DC780B;
+                         }
+                    }
 
-                              .user-job {
-                                   font-size: 12px;
-                                   font-weight: 400;
-                                   line-height: 14px;
-                              }
+                    .user-info {
+                         font-family: "Roboto";
+
+                         .user-name {
+                              font-size: 16px;
+                              font-weight: 400;
+                              line-height: 18.75px;
+                              margin-bottom: 6px;
+                         }
+
+                         .user-job {
+                              font-size: 12px;
+                              font-weight: 400;
+                              line-height: 14px;
                          }
                     }
                }

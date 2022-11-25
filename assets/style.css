@@ -7,10 +7,15 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-padding-top: 70px;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 body {
   max-width: 1440px;
   margin: 0 auto;
-  overflow-x: hidden;
 }
 
 ul {
@@ -35,6 +40,7 @@ a {
   justify-content: space-between;
   position: relative;
   margin-top: 30px;
+  z-index: 9999;
 }
 .pageFood_header-left {
   display: flex;
@@ -339,18 +345,26 @@ a {
 .menu_center {
   margin-top: 60px;
   max-height: 940px;
+  width: 100%;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
   gap: 30px;
+  transition: max-height 0.5s ease-in-out;
+}
+.menu_center.active {
+  max-height: 1880px;
 }
 .menu_center .list_food {
   max-width: 360px;
+  max-height: 446px;
+  overflow: hidden;
   background-color: #fff;
   position: relative;
   border-radius: 76px 10px 10px 10px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-top: 0;
+  justify-self: center;
 }
 .menu_center .list_food-img {
   width: 360px;
@@ -373,6 +387,12 @@ a {
   line-height: 34px;
   color: #150c01;
   line-height: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 .menu_center .list_food .food-desc #Monney {
   display: flex;
@@ -394,6 +414,12 @@ a {
   line-height: 20px;
   font-weight: 400;
   margin-top: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 .menu_center .list_food .food-desc button {
   padding: 10px 15px;
@@ -413,6 +439,9 @@ a {
 .menu_center .list_food .food-desc .fa-star {
   color: rgba(196, 196, 196, 0.3);
 }
+.menu_center .list_food .food-desc .fa-star.active {
+  color: #DC780B;
+}
 
 .menu_bottom-btn {
   padding: 11px 30px;
@@ -425,6 +454,10 @@ a {
   line-height: 18px;
   margin-top: 40px;
   cursor: pointer;
+  display: none;
+}
+.menu_bottom-btn.active {
+  display: block;
 }
 
 .menu_bottom-btn:hover {
@@ -591,31 +624,49 @@ img #bobo {
   margin-top: 73px;
 }
 .pageFood_slider .slider-container {
-  padding: 0 172px;
+  margin: 0 172px;
   display: flex;
+  height: 276px;
+  justify-content: center;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 .pageFood_slider .slider-container .slide-btn {
-  padding: 0 10px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 9999;
+  padding: 0 5px;
+}
+.pageFood_slider .slider-container .slide-btn.prev {
+  left: 0%;
+}
+.pageFood_slider .slider-container .slide-btn.next {
+  right: 0%;
 }
 .pageFood_slider .slider-container .slides {
   text-align: center;
-  flex: 1;
-  overflow: hidden;
+  display: flex;
+  z-index: 999;
+  position: absolute;
+  left: 0;
+  transition: left 0.5s ease-in-out;
 }
-.pageFood_slider .slider-container .slides .slide-wrapper {
-  position: relative;
-}
-.pageFood_slider .slider-container .slides .slide-wrapper .slide-item {
+.pageFood_slider .slider-container .slides .slide-item {
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
   gap: 32px;
+  width: 776px;
+  margin-left: 10px;
 }
-.pageFood_slider .slider-container .slides .slide-wrapper .slide-item .feedback-content .user-avt {
+.pageFood_slider .slider-container .slides .slide-item .feedback-content .user-avt {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   margin-bottom: 41px;
 }
-.pageFood_slider .slider-container .slides .slide-wrapper .slide-item .feedback-content .user-feedback {
+.pageFood_slider .slider-container .slides .slide-item .feedback-content .user-feedback {
   font-family: "Roboto";
   font-style: normal;
   font-size: 16px;
@@ -626,17 +677,26 @@ img #bobo {
   max-width: 506px;
   margin: 0 auto;
   margin-bottom: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
 }
-.pageFood_slider .slider-container .slides .slide-wrapper .slide-item .user-info {
+.pageFood_slider .slider-container .slides .slide-item .feedback-content .user-rate span.active {
+  color: #DC780B;
+}
+.pageFood_slider .slider-container .slides .slide-item .user-info {
   font-family: "Roboto";
 }
-.pageFood_slider .slider-container .slides .slide-wrapper .slide-item .user-info .user-name {
+.pageFood_slider .slider-container .slides .slide-item .user-info .user-name {
   font-size: 16px;
   font-weight: 400;
   line-height: 18.75px;
   margin-bottom: 6px;
 }
-.pageFood_slider .slider-container .slides .slide-wrapper .slide-item .user-info .user-job {
+.pageFood_slider .slider-container .slides .slide-item .user-info .user-job {
   font-size: 12px;
   font-weight: 400;
   line-height: 14px;
